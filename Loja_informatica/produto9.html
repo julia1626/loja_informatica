@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonte de Alimentação 650W 80 Plus Bronze</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/fonte.jpg" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Fonte de Alimentação 650W 80 Plus Bronze</h2>
+            <p>A Fonte de Alimentação 650W 80 Plus Bronze é projetada para oferecer energia estável e eficiente para computadores de médio a alto desempenho, sendo ideal para gamers e entusiastas de PCs que exigem segurança e confiabilidade. Com uma potência de 650W, essa fonte consegue alimentar componentes exigentes, como placas de vídeo dedicadas e múltiplos discos de armazenamento. A certificação 80 Plus Bronze garante uma eficiência energética de até 85%, reduzindo o desperdício de energia e ajudando a manter o consumo controlado. Além disso, possui proteções integradas contra sobrecarga, sobretensão e curto-circuito, preservando a integridade dos componentes do sistema. Seu sistema de resfriamento com ventilador silencioso de 120 mm garante que a fonte opere com baixa temperatura, minimizando o ruído durante o uso. Compacta e com cabos revestidos, a Fonte de Alimentação 650W 80 Plus Bronze é fácil de instalar e ajuda a manter o interior do gabinete organizado.</p>
+            <p><strong>Preço: R$ 305,90</strong></p>
+            <button onclick="addToCart('Fonte de Alimentação 650W 80 Plus Bronze', 305.90)">Adicionar ao carrinho</button>
+        </div>
+        <script>
+            // Adiciona o produto ao carrinho no localStorage
+            function addToCart(productName, productPrice) {
+                // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+                // Adicionar item ao carrinho
+                cart.push({ name: productName, price: productPrice });
+    
+                // Atualizar o localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+    
+                alert("Produto adicionado ao carrinho!");
+            }
+        </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

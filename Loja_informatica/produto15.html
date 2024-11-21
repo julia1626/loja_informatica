@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hub USB 3.0 com 4 Portas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/hub.webp" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Hub USB 3.0 com 4 Portas</h2>
+            <p>O Hub USB 3.0 com 4 Portas é um acessório prático e essencial para quem precisa conectar vários dispositivos ao mesmo tempo, seja em um notebook ou desktop. Com quatro portas USB 3.0, ele permite transferências de dados em alta velocidade, alcançando até 5 Gbps, ideal para arquivos grandes, como vídeos, fotos e backups. Este hub é compatível com dispositivos USB 2.0 e USB 1.1, garantindo versatilidade com uma ampla gama de acessórios, como pen drives, mouses, teclados e discos externos. Compacto e leve, é fácil de transportar e cabe em qualquer bolsa, sendo ideal para uso em escritórios, home offices e até em viagens. Ele possui proteção contra sobrecargas, curto-circuito e superaquecimento, assegurando segurança e confiabilidade ao conectar diversos equipamentos. Com design minimalista e cabo resistente, o Hub USB 3.0 com 4 Portas é uma excelente solução para expandir as possibilidades de conectividade.</p>
+            <p><strong>Preço: R$ 25,90</strong></p>
+            <button onclick="addToCart('Hub USB 3.0 com 4 Portas', 25.90)">Adicionar ao carrinho</button>
+        </div>
+        <script>
+            // Adiciona o produto ao carrinho no localStorage
+            function addToCart(productName, productPrice) {
+                // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+                // Adicionar item ao carrinho
+                cart.push({ name: productName, price: productPrice });
+    
+                // Atualizar o localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+    
+                alert("Produto adicionado ao carrinho!");
+            }
+        </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

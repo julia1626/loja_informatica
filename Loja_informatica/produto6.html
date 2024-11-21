@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headset com Microfone com Cancelamento de Ruído</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/headset.webp" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Headset com Microfone com Cancelamento de Ruído</h2>
+            <p>O Headset com Microfone e Cancelamento de Ruído é ideal para quem busca qualidade de áudio e comunicação clara em jogos, chamadas e videoconferências. Equipado com som surround, este headset proporciona uma experiência sonora imersiva, permitindo que o usuário perceba a direção dos sons com precisão, essencial para gamers que desejam vantagem competitiva. O microfone integrado possui tecnologia de cancelamento de ruído, filtrando ruídos externos e captando a voz com clareza, garantindo que as conversas sejam nítidas e sem interferências. Com design ergonômico, suas almofadas acolchoadas e arco ajustável oferecem conforto, mesmo durante uso prolongado. Feito com materiais resistentes e leves, o headset é durável e confortável de usar em sessões de longa duração. Ele possui controles de volume e mudo ao alcance da mão, oferecendo praticidade e rapidez. Compatível com PCs, consoles e dispositivos móveis, este headset é uma escolha completa para quem prioriza qualidade e conforto. </p>
+            <p><strong>Preço: R$ 112,90</strong></p>
+            <button onclick="addToCart('Headset com Microfone com Cancelamento de Ruído', 112.90)">Adicionar ao carrinho</button>
+        </div>
+
+    <script>
+        // Adiciona o produto ao carrinho no localStorage
+        function addToCart(productName, productPrice) {
+            // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Adicionar item ao carrinho
+            cart.push({ name: productName, price: productPrice });
+
+            // Atualizar o localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

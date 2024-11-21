@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooler para Processador com LED RGB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/cooler.webp" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Cooler para Processador com LED RGB</h2>
+            <p>O Cooler para Processador com LED RGB é a escolha perfeita para quem deseja manter o processador em temperaturas seguras, mesmo durante tarefas intensas, enquanto adiciona um toque de estilo ao setup. Com um design moderno e iluminação LED RGB personalizável, ele permite criar efeitos de luz que combinam com outros componentes do computador, realçando a estética do gabinete. Equipado com aletas de alumínio e um ventilador de 120 mm silencioso, o cooler oferece excelente dissipação de calor e operação de baixo ruído, garantindo que o sistema se mantenha frio e eficiente sem distrações. Fácil de instalar, ele é compatível com a maioria dos sockets de processadores AMD e Intel, oferecendo uma solução universal para entusiastas de PC e gamers. Com controles de velocidade ajustáveis e LEDs duráveis, o Cooler para Processador com LED RGB combina eficiência térmica, desempenho silencioso e uma estética impressionante para setups personalizados.</p>
+            <p><strong>Preço: R$ 36,90</strong></p>
+            <button onclick="addToCart('Cooler para Processador com LED RGB', 36.90)">Adicionar ao carrinho</button>
+        </div>
+        <script>
+            // Adiciona o produto ao carrinho no localStorage
+            function addToCart(productName, productPrice) {
+                // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+                // Adicionar item ao carrinho
+                cart.push({ name: productName, price: productPrice });
+    
+                // Atualizar o localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+    
+                alert("Produto adicionado ao carrinho!");
+            }
+        </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

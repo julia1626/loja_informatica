@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mousepad Gamer XL Antiderrapante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/mousepad.webp" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Mousepad Gamer XL Antiderrapante</h2>
+            <p>O Mousepad Gamer XL Antiderrapante é projetado para garantir precisão e conforto em sessões de jogos intensas ou longas horas de trabalho. Com um tamanho extra grande, ele cobre uma ampla área da mesa, acomodando tanto o mouse quanto o teclado, proporcionando um espaço ideal para movimentos rápidos e livres. A superfície é feita de tecido microtexturizado que oferece equilíbrio perfeito entre controle e velocidade, garantindo movimentos precisos sem perder agilidade. A base antiderrapante de borracha mantém o mousepad firme no lugar, evitando deslizes indesejados que podem atrapalhar durante partidas. Com bordas costuradas reforçadas, o mousepad é durável e resistente ao desgaste, evitando que as extremidades se desfiem com o tempo. Seu material é fácil de limpar e resistente a respingos, mantendo-o em ótimo estado por mais tempo. O Mousepad Gamer XL Antiderrapante é ideal para jogadores que buscam desempenho e um setup organizado e confortável.</p>
+            <p><strong>Preço: R$ 35,90</strong></p>
+            <button onclick="addToCart('Mousepad Gamer XL Antiderrapante', 35.90)">Adicionar ao carrinho</button>
+        </div>
+        <script>
+            // Adiciona o produto ao carrinho no localStorage
+            function addToCart(productName, productPrice) {
+                // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+                // Adicionar item ao carrinho
+                cart.push({ name: productName, price: productPrice });
+    
+                // Atualizar o localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+    
+                alert("Produto adicionado ao carrinho!");
+            }
+        </script>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

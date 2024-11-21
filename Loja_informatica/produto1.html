@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Gamer RGB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/mouse.webp" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Mouse Gamer RGB</h2>
+            <p>Este Mouse Gamer RGB foi projetado para jogadores que buscam precisão, estilo e conforto em longas sessões de uso. Com um design ergonômico, ele se ajusta perfeitamente à mão, reduzindo a fadiga e permitindo movimentos rápidos e fluidos. A retroiluminação RGB personalizável, com milhões de combinações de cores, permite criar efeitos de luz que combinam com o setup do jogador, proporcionando uma experiência imersiva e visualmente impactante. Equipado com um sensor de alta precisão, ele oferece até 16.000 DPI, ajustáveis para adaptar-se a diferentes necessidades, desde movimentos rápidos em jogos de ação até uma resposta mais controlada em tarefas que exigem precisão. Os botões programáveis são um recurso essencial para jogos, pois permitem personalizar comandos, criando atalhos que otimizam o desempenho durante as partidas. Com uma construção durável e switches mecânicos de resposta rápida, o Mouse Gamer RGB é uma escolha ideal para entusiastas de jogos que buscam desempenho e personalização.</p>
+            <p><strong>Preço: R$ 54,90</strong></p>
+            <button onclick="addToCart('Mouse Gamer RGB', 54.90)">Adicionar ao carrinho</button>
+        </div>
+
+    <script>
+        // Adiciona o produto ao carrinho no localStorage
+        function addToCart(productName, productPrice) {
+            // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Adicionar item ao carrinho
+            cart.push({ name: productName, price: productPrice });
+
+            // Atualizar o localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

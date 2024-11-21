@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Placa de Vídeo GTX 1660 Super 6GB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/placa.jpeg" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Placa de Vídeo GTX 1660 Super 6GB</h2>
+            <p>A Placa de Vídeo GTX 1660 Super 6GB é uma excelente escolha para gamers e profissionais que buscam desempenho gráfico de qualidade em resolução Full HD e até 4K. Com 6GB de memória GDDR6, esta placa oferece uma velocidade de processamento rápida e fluida, permitindo rodar jogos e aplicativos gráficos com alta qualidade de imagem e taxas de quadros consistentes. Equipada com arquitetura Turing, ela melhora o desempenho em relação a gerações anteriores, entregando eficiência em jogos modernos e softwares de edição de vídeo. Sua tecnologia de resfriamento avançada mantém a temperatura ideal durante sessões intensas, garantindo durabilidade e estabilidade. Além disso, a placa possui várias saídas, como HDMI e DisplayPort, facilitando a conexão com monitores e TVs. Compacta e fácil de instalar, a GTX 1660 Super 6GB é uma solução poderosa para quem deseja um upgrade significativo no desempenho gráfico, seja em jogos ou em edição de conteúdo visual.</p>
+            <p><strong>Preço: R$ 1318,90</strong></p>
+            <button onclick="addToCart('Placa de Vídeo GTX 1660 Super 6GB', 1318.90)">Adicionar ao carrinho</button>
+        </div>
+
+    <script>
+        // Adiciona o produto ao carrinho no localStorage
+        function addToCart(productName, productPrice) {
+            // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Adicionar item ao carrinho
+            cart.push({ name: productName, price: productPrice });
+
+            // Atualizar o localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

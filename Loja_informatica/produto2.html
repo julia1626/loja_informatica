@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teclado Mecânico Retroiluminado</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/teclado.webp" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Teclado Mecânico Retroiluminado</h2>
+            <p>O Teclado Mecânico Retroiluminado é ideal para gamers e profissionais que valorizam precisão e durabilidade. Equipado com switches mecânicos de alta qualidade, este teclado proporciona uma experiência de digitação rápida e tátil, reduzindo o tempo de resposta entre cada pressionamento. Com uma retroiluminação RGB personalizável, os usuários podem ajustar cores e efeitos para criar uma atmosfera única e imersiva, combinando com o setup e melhorando a visibilidade em ambientes com pouca luz. As teclas anti-ghosting garantem que múltiplos comandos sejam registrados ao mesmo tempo, essencial em jogos que exigem precisão e velocidade. Além disso, seu design robusto e ergonômico proporciona conforto durante longas horas de uso, enquanto a base antiderrapante oferece estabilidade em superfícies diversas. Este teclado também conta com teclas multimídia dedicadas, facilitando o controle rápido de áudio e outras funções, tornando-o uma escolha completa para quem deseja desempenho, estilo e praticidade.</p>
+            <p><strong>Preço: R$ 96,90</strong></p>
+            <button onclick="addToCart('Teclado Mecânico Retroiluminado', 96.90)">Adicionar ao carrinho</button>
+        </div>
+
+    <script>
+        // Adiciona o produto ao carrinho no localStorage
+        function addToCart(productName, productPrice) {
+            // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Adicionar item ao carrinho
+            cart.push({ name: productName, price: productPrice });
+
+            // Atualizar o localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

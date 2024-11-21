@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitor Curvo 27" Full HD</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/monitor.jpg" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Monitor Curvo 27" Full HD</h2>
+            <p>O Monitor Curvo 27" Full HD oferece uma experiência visual imersiva e confortável, ideal para gamers, profissionais de design e entusiastas de filmes. Com uma tela de 27 polegadas e resolução Full HD (1920x1080), ele apresenta cores vibrantes e detalhes nítidos, trazendo realismo e profundidade às imagens. O design curvo é projetado para reduzir a fadiga ocular, proporcionando uma visão panorâmica que melhora a percepção em jogos e conteúdo multimídia. Equipado com uma taxa de atualização de 75Hz e um tempo de resposta rápido, este monitor minimiza borrões e lags, garantindo maior fluidez em cenas rápidas. A tecnologia antirreflexo e o modo de redução de luz azul ajudam a proteger os olhos, tornando-o ideal para uso prolongado. Além disso, seu design fino e moderno, com bordas ultrafinas, economiza espaço e dá um toque sofisticado a qualquer ambiente de trabalho ou entretenimento.</p>
+            <p><strong>Preço: R$ 775,90</strong></p>
+            <button onclick="addToCart('Monitor Curvo 27 Full HD', 775.90)">Adicionar ao carrinho</button>
+        </div>
+
+    <script>
+        // Adiciona o produto ao carrinho no localStorage
+        function addToCart(productName, productPrice) {
+            // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Adicionar item ao carrinho
+            cart.push({ name: productName, price: productPrice });
+
+            // Atualizar o localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

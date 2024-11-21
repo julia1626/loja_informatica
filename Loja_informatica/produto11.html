@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressora Multifuncional Jato de Tinta Wi-Fi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/impressora.webp" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Impressora Multifuncional Jato de Tinta Wi-Fi</h2>
+            <p>A Impressora Multifuncional Jato de Tinta Wi-Fi é uma solução completa para usuários que precisam imprimir, copiar e digitalizar documentos com qualidade e praticidade. Com conexão Wi-Fi, permite impressão direta de dispositivos móveis como smartphones e tablets, sem necessidade de cabos, facilitando o uso em casa ou no escritório. Esta impressora utiliza tecnologia de jato de tinta, garantindo impressões coloridas e nítidas, com alta resolução para fotos e documentos. Seu sistema de cartuchos econômicos reduz custos de impressão, sendo ideal para quem imprime regularmente. Com um design compacto, ela se adapta a qualquer espaço de trabalho, ocupando pouco espaço. Além disso, conta com um painel intuitivo que facilita a navegação e o ajuste de configurações. A função de digitalização permite armazenar documentos em formato digital com qualidade, enquanto a função de cópia rápida é prática para o dia a dia. A Impressora Multifuncional Jato de Tinta Wi-Fi é versátil, econômica e fácil de usar.</p>
+            <p><strong>Preço: R$ 1490,90</strong></p>
+            <button onclick="addToCart('Impressora Multifuncional Jato de Tinta Wi-Fi', 1490.90)">Adicionar ao carrinho</button>
+        </div>
+        <script>
+            // Adiciona o produto ao carrinho no localStorage
+            function addToCart(productName, productPrice) {
+                // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    
+                // Adicionar item ao carrinho
+                cart.push({ name: productName, price: productPrice });
+    
+                // Atualizar o localStorage
+                localStorage.setItem("cart", JSON.stringify(cart));
+    
+                alert("Produto adicionado ao carrinho!");
+            }
+        </script>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

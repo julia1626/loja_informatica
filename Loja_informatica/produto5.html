@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadeira Gamer ErgonômicaSSD 1TB NVMe</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <section id="banner">
+        <img src="/logo__2_-removebg-preview.png">
+    </section>
+    <!-- Navbar -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="cadastre-se.html">Cadastre-se</a></li>
+                <li><a href="carrinho.html">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Produto -->
+    <section class="product-detail">
+        <div class="product-image">
+            <img src="/cadeira.jfif" alt="Produto 1">
+        </div>
+        <div class="product-info">
+            <h2>Cadeira Gamer Ergonômica</h2>
+            <p>A Cadeira Gamer Ergonômica é projetada para garantir conforto e suporte em longas sessões de uso, seja para jogos, trabalho ou estudo. Com um design ergonômico e estrutura reforçada, esta cadeira ajuda a manter uma postura saudável, reduzindo o risco de fadiga e desconforto nas costas e pescoço. Ela inclui almofadas ajustáveis para apoio lombar e cervical, oferecendo suporte extra em áreas-chave do corpo. Seu encosto reclinável de até 180 graus permite ao usuário encontrar o ângulo ideal para relaxar ou focar em atividades intensas. Feita com materiais de alta qualidade, a cadeira possui estofamento espesso e acabamento em couro sintético resistente, fácil de limpar e com excelente durabilidade. Os apoios de braço são ajustáveis, adaptando-se às necessidades de cada usuário. Além de funcionalidade, o design moderno e esportivo traz um toque estiloso ao setup, tornando a Cadeira Gamer Ergonômica uma opção essencial para quem busca conforto e desempenho.</p>
+            <p><strong>Preço: R$ 618,90</strong></p>
+            <button onclick="addToCart('Cadeira Gamer Ergonômica', 618.90)">Adicionar ao carrinho</button>
+        </div>
+
+    <script>
+        // Adiciona o produto ao carrinho no localStorage
+        function addToCart(productName, productPrice) {
+            // Recuperar o carrinho atual do localStorage (ou inicializar vazio)
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+            // Adicionar item ao carrinho
+            cart.push({ name: productName, price: productPrice });
+
+            // Atualizar o localStorage
+            localStorage.setItem("cart", JSON.stringify(cart));
+
+            alert("Produto adicionado ao carrinho!");
+        }
+    </script>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 TechPlace</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
